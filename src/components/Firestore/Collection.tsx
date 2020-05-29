@@ -176,7 +176,7 @@ export const CollectionPresentation: React.FC<CollectionPresentationProps> = ({
       <Route
         path={`${url}/:id`}
         render={({ match }: any) => {
-          const docId = decodeURIComponent(match.params.id);
+          const docId = match.params.id;
           const docRef = collection.doc(docId);
           return <Document reference={docRef} />;
         }}
